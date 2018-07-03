@@ -1,16 +1,23 @@
 # Sample iOS Timer
+## 개요
+> Timer 를 thread 처럼 생각하고 사용하는 경우도 있고, <br />
+RunLoop의 commonModes로 설정해서 사용한다는 것을 모르는 사람이 적은 것 같습니다. <br />
+저도 생각없이 사용하고 있었습니다. 싱크가 안맞으면 어느정도 보정해서 쓰면되겠지 하면서..(헉) <br />
+무지함을 반성하면서, 다시 이해하고.. <br />
+셈플도 만들어 보며, 이것을 공유하기 위한 목적으로 작성하였습니다.
+
 ## 주요 설명
 [![License](http://img.shields.io/badge/License-MIT-green.svg?style=flat)](https://github.com/clintjang/sample-ios-timer/blob/master/LICENSE) [![Swift 4](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://swift.org) 
 - [Timer](https://developer.apple.com/documentation/foundation/timer?changes=_3) : Objc 에서는 NSTimer, swift에서는 Timer Class 입니다.
 - iOS 2.0+
 - Timer 와 [Thread](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/Multithreading/AboutThreads/AboutThreads.html)는 전혀 다른 것 입니다.
 - 타이머(Timer)는 [실행 루프](https://developer.apple.com/documentation/foundation/runloop)와 함께 작동합니다.
-- 타이머는 별도의 스레드가 아니라 해당 런루프 내의 tick을 이용하는 것 입니다.
+- 타이머는 별도의 스레드가 아니라 해당 실행 루프 안에서 tick을 이용하는 것 입니다.
 - 타이머 더이상 루프가 없어서 종료되기 전에는 반드시 invalidate() 를 실행해 줘야됩니다.
 	- [invalidate()](https://developer.apple.com/documentation/foundation/runloop/1418468-add) 함수는 타이머가 다시 실행되는 것을 중지하고 실행 루프에서 타이머를 제거하도록 요청합니다. 그래서 실행(invalidate())을 시켜주지 않으면 메모리 leak이 발생합니다.
 	- (The receiver retains aTimer. To remove a timer from all run loop modes on which it is installed, send an invalidate() message to the timer.)
 - 실행 루프에서 타이머 예약하는 방법은 크게 3가지라고 할 수 있습니다. 자동으로 되는 경우(1)와 수동으로 등록하는 방법(2)도 있습니다. 그리고 실행루프에 추가할때도 멀티플하게 실행 루프 모드를 설정해서 추가할 수 있습니다.
-	- 자동으로 Runloop에 등록되는 경우
+	- 자동으로 Runloop에 등록되는 경우 (기본 실행 루프로 설정됨)
 	```swift
     // 현재의 실행 루프에 default mode로 스케쥴된 새로운 timer가 추가됩니다.
     class func scheduledTimer(timeInterval ti: TimeInterval, 
@@ -55,6 +62,35 @@
   }
   ```
   - 사용자의 이벤트(사용자 액션, 스와이프, 터치 등등)는 기본 실행 루프에서 동작하는데 이 이벤트가 들어와서 멈추는 이슈를 commonModes 등록하면 사용자의 이벤트에 따른 멈춤 현상은 없기때문에 보다 정확하게 동작할 수 있습니다.
+
+## CADisplayLink
+- [CADisplayLink](https://developer.apple.com/documentation/quartzcore/cadisplaylink?changes=_8) 이것도 Timer Class 입니다. 
+- 하지만, Core Animation에서 사용하는 Class 입니다. 앱에서의 드로잉의 동기화와 화면 새로고침 빈도에 맞춰서 사용하기 위한 용도입니다. 
+- 사용할 때는 Timer와 비슷합니다.
+- 살짝 사용을 해본다면..
+```swift
+// 생성시
+var timer: CADisplayLink?
+timer = CADisplayLink(target: self, selector: #selector(runEventFunction))
+timer?.add(to: RunLoop.current, forMode: RunLoopMode.commonModes)
+
+.. (중략)
+
+// Event
+@objc public func runEventFunction(displaylink: CADisplayLink) {
+	// 해당 비지니스 로직
+}
+
+// 제거시
+if (timer != nil) {
+    timer?.invalidate()
+    timer = nil
+}
+```
+
+- 이것은 코어 애니메이션을 사용할 때 유용할 것입니다.
+> A timer object that allows your application to synchronize its drawing to the refresh rate of the display. <br />
+Your application initializes a new display link, providing a target object and a selector to be called when the screen is updated. To synchronize your display loop with the display, your application adds it to a run loop using the add(to:forMode:) method.
 
 # 자세히 여러 케이스 진행은 ..
 .. 진행중
