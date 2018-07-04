@@ -7,29 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC898AFB20ECC9BF00242EAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC898AFA20ECC9BF00242EAA /* AppDelegate.m */; };
-		BC898AFE20ECC9BF00242EAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC898AFD20ECC9BF00242EAA /* ViewController.m */; };
-		BC898B0120ECC9BF00242EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC898AFF20ECC9BF00242EAA /* Main.storyboard */; };
-		BC898B0320ECC9BF00242EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC898B0220ECC9BF00242EAA /* Assets.xcassets */; };
-		BC898B0620ECC9BF00242EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC898B0420ECC9BF00242EAA /* LaunchScreen.storyboard */; };
-		BC898B0920ECC9BF00242EAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC898B0820ECC9BF00242EAA /* main.m */; };
+		BC898B1C20ECCECA00242EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC898B1B20ECCECA00242EAA /* AppDelegate.swift */; };
+		BC898B1E20ECCECA00242EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC898B1D20ECCECA00242EAA /* ViewController.swift */; };
+		BC898B2120ECCECA00242EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC898B1F20ECCECA00242EAA /* Main.storyboard */; };
+		BC898B2320ECCECA00242EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC898B2220ECCECA00242EAA /* Assets.xcassets */; };
+		BC898B2620ECCECA00242EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC898B2420ECCECA00242EAA /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC898AF620ECC9BF00242EAA /* JWSTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC898AF920ECC9BF00242EAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		BC898AFA20ECC9BF00242EAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BC898AFC20ECC9BF00242EAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BC898AFD20ECC9BF00242EAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BC898B0020ECC9BF00242EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BC898B0220ECC9BF00242EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BC898B0520ECC9BF00242EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC898B0720ECC9BF00242EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC898B0820ECC9BF00242EAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC898B1820ECCEC900242EAA /* JWSTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC898B1B20ECCECA00242EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC898B1D20ECCECA00242EAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC898B2020ECCECA00242EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC898B2220ECCECA00242EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC898B2520ECCECA00242EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC898B2720ECCECA00242EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BC898AF320ECC9BF00242EAA /* Frameworks */ = {
+		BC898B1520ECCEC900242EAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,34 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BC898AED20ECC9BF00242EAA = {
+		BC898B0F20ECCEC900242EAA = {
 			isa = PBXGroup;
 			children = (
-				BC898AF820ECC9BF00242EAA /* JWSTimer */,
-				BC898AF720ECC9BF00242EAA /* Products */,
+				BC898B1A20ECCECA00242EAA /* JWSTimer */,
+				BC898B1920ECCEC900242EAA /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BC898AF720ECC9BF00242EAA /* Products */ = {
+		BC898B1920ECCEC900242EAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BC898AF620ECC9BF00242EAA /* JWSTimer.app */,
+				BC898B1820ECCEC900242EAA /* JWSTimer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC898AF820ECC9BF00242EAA /* JWSTimer */ = {
+		BC898B1A20ECCECA00242EAA /* JWSTimer */ = {
 			isa = PBXGroup;
 			children = (
-				BC898AF920ECC9BF00242EAA /* AppDelegate.h */,
-				BC898AFA20ECC9BF00242EAA /* AppDelegate.m */,
-				BC898AFC20ECC9BF00242EAA /* ViewController.h */,
-				BC898AFD20ECC9BF00242EAA /* ViewController.m */,
-				BC898AFF20ECC9BF00242EAA /* Main.storyboard */,
-				BC898B0220ECC9BF00242EAA /* Assets.xcassets */,
-				BC898B0420ECC9BF00242EAA /* LaunchScreen.storyboard */,
-				BC898B0720ECC9BF00242EAA /* Info.plist */,
-				BC898B0820ECC9BF00242EAA /* main.m */,
+				BC898B1B20ECCECA00242EAA /* AppDelegate.swift */,
+				BC898B1D20ECCECA00242EAA /* ViewController.swift */,
+				BC898B1F20ECCECA00242EAA /* Main.storyboard */,
+				BC898B2220ECCECA00242EAA /* Assets.xcassets */,
+				BC898B2420ECCECA00242EAA /* LaunchScreen.storyboard */,
+				BC898B2720ECCECA00242EAA /* Info.plist */,
 			);
 			path = JWSTimer;
 			sourceTree = "<group>";
@@ -74,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BC898AF520ECC9BF00242EAA /* JWSTimer */ = {
+		BC898B1720ECCEC900242EAA /* JWSTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC898B0C20ECC9BF00242EAA /* Build configuration list for PBXNativeTarget "JWSTimer" */;
+			buildConfigurationList = BC898B2A20ECCECA00242EAA /* Build configuration list for PBXNativeTarget "JWSTimer" */;
 			buildPhases = (
-				BC898AF220ECC9BF00242EAA /* Sources */,
-				BC898AF320ECC9BF00242EAA /* Frameworks */,
-				BC898AF420ECC9BF00242EAA /* Resources */,
+				BC898B1420ECCEC900242EAA /* Sources */,
+				BC898B1520ECCEC900242EAA /* Frameworks */,
+				BC898B1620ECCEC900242EAA /* Resources */,
 			);
 			buildRules = (
 			);
@@ -88,25 +81,26 @@
 			);
 			name = JWSTimer;
 			productName = JWSTimer;
-			productReference = BC898AF620ECC9BF00242EAA /* JWSTimer.app */;
+			productReference = BC898B1820ECCEC900242EAA /* JWSTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BC898AEE20ECC9BF00242EAA /* Project object */ = {
+		BC898B1020ECCEC900242EAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = clint;
 				TargetAttributes = {
-					BC898AF520ECC9BF00242EAA = {
+					BC898B1720ECCEC900242EAA = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = BC898AF120ECC9BF00242EAA /* Build configuration list for PBXProject "JWSTimer" */;
+			buildConfigurationList = BC898B1320ECCEC900242EAA /* Build configuration list for PBXProject "JWSTimer" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,55 +108,54 @@
 				en,
 				Base,
 			);
-			mainGroup = BC898AED20ECC9BF00242EAA;
-			productRefGroup = BC898AF720ECC9BF00242EAA /* Products */;
+			mainGroup = BC898B0F20ECCEC900242EAA;
+			productRefGroup = BC898B1920ECCEC900242EAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BC898AF520ECC9BF00242EAA /* JWSTimer */,
+				BC898B1720ECCEC900242EAA /* JWSTimer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BC898AF420ECC9BF00242EAA /* Resources */ = {
+		BC898B1620ECCEC900242EAA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC898B0620ECC9BF00242EAA /* LaunchScreen.storyboard in Resources */,
-				BC898B0320ECC9BF00242EAA /* Assets.xcassets in Resources */,
-				BC898B0120ECC9BF00242EAA /* Main.storyboard in Resources */,
+				BC898B2620ECCECA00242EAA /* LaunchScreen.storyboard in Resources */,
+				BC898B2320ECCECA00242EAA /* Assets.xcassets in Resources */,
+				BC898B2120ECCECA00242EAA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BC898AF220ECC9BF00242EAA /* Sources */ = {
+		BC898B1420ECCEC900242EAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC898AFE20ECC9BF00242EAA /* ViewController.m in Sources */,
-				BC898B0920ECC9BF00242EAA /* main.m in Sources */,
-				BC898AFB20ECC9BF00242EAA /* AppDelegate.m in Sources */,
+				BC898B1E20ECCECA00242EAA /* ViewController.swift in Sources */,
+				BC898B1C20ECCECA00242EAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BC898AFF20ECC9BF00242EAA /* Main.storyboard */ = {
+		BC898B1F20ECCECA00242EAA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BC898B0020ECC9BF00242EAA /* Base */,
+				BC898B2020ECCECA00242EAA /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		BC898B0420ECC9BF00242EAA /* LaunchScreen.storyboard */ = {
+		BC898B2420ECCECA00242EAA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BC898B0520ECC9BF00242EAA /* Base */,
+				BC898B2520ECCECA00242EAA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +163,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		BC898B0A20ECC9BF00242EAA /* Debug */ = {
+		BC898B2820ECCECA00242EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,10 +215,12 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		BC898B0B20ECC9BF00242EAA /* Release */ = {
+		BC898B2920ECCECA00242EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,11 +265,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		BC898B0D20ECC9BF00242EAA /* Debug */ = {
+		BC898B2B20ECCECA00242EAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -284,11 +280,12 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.clintjang.JWSTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		BC898B0E20ECC9BF00242EAA /* Release */ = {
+		BC898B2C20ECCECA00242EAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,6 +295,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.clintjang.JWSTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -305,25 +303,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BC898AF120ECC9BF00242EAA /* Build configuration list for PBXProject "JWSTimer" */ = {
+		BC898B1320ECCEC900242EAA /* Build configuration list for PBXProject "JWSTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC898B0A20ECC9BF00242EAA /* Debug */,
-				BC898B0B20ECC9BF00242EAA /* Release */,
+				BC898B2820ECCECA00242EAA /* Debug */,
+				BC898B2920ECCECA00242EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC898B0C20ECC9BF00242EAA /* Build configuration list for PBXNativeTarget "JWSTimer" */ = {
+		BC898B2A20ECCECA00242EAA /* Build configuration list for PBXNativeTarget "JWSTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BC898B0D20ECC9BF00242EAA /* Debug */,
-				BC898B0E20ECC9BF00242EAA /* Release */,
+				BC898B2B20ECCECA00242EAA /* Debug */,
+				BC898B2C20ECCECA00242EAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = BC898AEE20ECC9BF00242EAA /* Project object */;
+	rootObject = BC898B1020ECCEC900242EAA /* Project object */;
 }
