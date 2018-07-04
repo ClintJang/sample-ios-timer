@@ -1,6 +1,5 @@
 # Sample iOS Timer
-## 개요
-> Timer 를 thread 처럼 생각하고 사용하는 경우도 있고, <br />
+> Timer 를 Thread 처럼 생각하고 사용하는 경우도 있고, <br />
 RunLoop의 commonModes로 설정해서 사용한다는 것을 모르는 사람이 적은 것 같습니다. <br />
 저도 생각없이 사용하고 있었습니다. 싱크가 안맞으면 어느정도 보정해서 쓰면되겠지 하면서..(헉) <br />
 무지함을 반성하면서, 다시 이해하고.. <br />
@@ -62,6 +61,51 @@ RunLoop의 commonModes로 설정해서 사용한다는 것을 모르는 사람�
   }
   ```
   - 사용자의 이벤트(사용자 액션, 스와이프, 터치 등등)는 기본 실행 루프에서 동작하는데 이 이벤트가 들어와서 멈추는 이슈를 commonModes 등록하면 사용자의 이벤트에 따른 멈춤 현상은 없기때문에 보다 정확하게 동작할 수 있습니다.
+
+## 상세 기능
+### 함수
+- [fire()](https://developer.apple.com/documentation/foundation/timer/1414035-fire?changes=_3) : 타이머 메시지 발송 실행~
+	- 타이머의 메세지를 그 타겟에 전달합니다.
+	- iOS 2.0+
+	```swift
+	func fire()
+	```
+- [invalidate()](https://developer.apple.com/documentation/foundation/timer/1415405-invalidate?changes=_3) : 타이머가 다시 시작되는 것을 중지하고, 실행 루프에서 타이머를 제거합니다.
+	- iOS 2.0+
+    ```swift
+    func invalidate()
+    ```
+### 가져올 수 있는 상태 정보
+- [isValid](https://developer.apple.com/documentation/foundation/timer/1408249-isvalid?changes=_3) : 타이머가 현재 유효한지 여부
+	- iOS 2.0+
+	```swift
+	var isValid: Bool { get }
+	```
+    
+- [fireDate](https://developer.apple.com/documentation/foundation/timer/1407353-firedate?changes=_3) : 타이머가 시작되는 날짜 정보    
+	- iOS 2.0+
+    ```swift
+	var fireDate: Date { get set }
+	```
+
+- [timeInterval](https://developer.apple.com/documentation/foundation/timer/1409024-timeinterval?changes=_3) : 타이머의 시간 간격 (초)
+	- iOS 2.0+
+    ```swift
+	var timeInterval: TimeInterval { get }
+	```
+
+- [userInfo](https://developer.apple.com/documentation/foundation/timer/1408911-userinfo?changes=_3) : receiver의 userInfo 객체
+	- iOS 2.0+
+	- isValid 속성을 사용해서 유효할 때, 정보를 가져오세요.
+    ```swift
+	var userInfo: Any? { get }
+	```
+### 타이머 메시지 발송의 허용 오차 설정
+- [tolerance](https://developer.apple.com/documentation/foundation/timer/1415085-tolerance?changes=_3) : 타이머가 시작될 예정인 발사 날짜 이후의 시간 설정
+	- iOS 7.0+
+    ```swift
+	var tolerance: TimeInterval { get set }
+	```
 
 ## CADisplayLink
 - [CADisplayLink](https://developer.apple.com/documentation/quartzcore/cadisplaylink?changes=_8) 이것도 Timer Class 입니다. 
